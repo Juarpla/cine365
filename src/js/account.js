@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <p>Please sign up in newsletter.</p>
               </section>
             `;
-      deleteAccountDataBtn.setAttribute("hidden");
+      deleteAccountDataBtn.setAttribute("hidden", true);
     }
   }
 

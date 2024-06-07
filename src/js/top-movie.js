@@ -28,57 +28,12 @@ function displayMovies(movies) {
   });
 }
 
-async function fetchPopularMovies() {
-  try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`,
-    );
-    const data = await response.json();
-    displayMovies(data.results);
-  } catch (error) {
-    console.error(`Error fetching popular movies: ${error}`);
-  }
-}
-
-async function searchMovies() {
-  const query = document.querySelector("#searchInput").value;
-  try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`,
-    );
-    const data = await response.json();
-    console.log(`Search movies: ${data.results}`);
-    displayMovies(data.results);
-  } catch (error) {
-    console.error(`Error Searching movies: ${error}`);
-  }
-}
-
-async function fetchByGenreMovies() {
-  const genreSelect = document.querySelector("#genreFilter");
-  const selectedGenreId = genreSelect.value;
-  if (!selectedGenreId) {
-    console.error("Please select a genre.");
-    return;
-  }
-  try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${selectedGenreId}`,
-    );
-    const data = await response.json();
-    displayMovies(data.results);
-  } catch (error) {
-    console.error(`Error fetching movies by genre: ${error}`);
-  }
-}
-
 async function fetchTopRatedMovies() {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`,
     );
     const data = await response.json();
-    console.log(`Top Rated Movies: ", ${data.results}`);
     displayMovies(data.results);
   } catch (error) {
     console.error(`Error fetching top rated movies: ${error}`);
@@ -88,10 +43,3 @@ async function fetchTopRatedMovies() {
 // call:
 fetchTopRatedMovies();
 
-document.getElementById("searchButton").addEventListener("click", searchMovies);
-document
-  .getElementById("byGenreButton")
-  .addEventListener("click", fetchByGenreMovies);
-document
-  .getElementById("topRatedButton")
-  .addEventListener("click", fetchTopRatedMovies);
