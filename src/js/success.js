@@ -10,3 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("registerForm");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    window.location.href = "../index.html";
+  });
+});
