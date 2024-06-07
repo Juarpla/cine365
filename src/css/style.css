@@ -338,6 +338,10 @@ footer {
   gap: 5px;
 }
 
+.searchArea .btn-account {
+  margin-top: 0.5rem;
+}
+
 .form-container {
   padding: 40px;
   border-radius: 10px;
