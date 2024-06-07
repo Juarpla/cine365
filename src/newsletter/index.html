@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
       rel="stylesheet">
     <script type="module" src="/js/main.js" defer></script>
-    <script type="module" src="/js/project.js" defer></script>
+    <script type="module" src="/js/newsletter.js" defer></script>
   </body>
   </head>
   <body>
@@ -30,7 +30,7 @@
       <h1>Sing up Newsletter</h1>
       <div class="form-container">
         <p class="form-advice">📝 All fields are required ✍️</p>
-        <form id="registerForm" action="/account/index.html" method="post">
+        <form id="registerForm" action="/account/" method="post">
           <div class="form-group">
             <label for="firstName">First Name:</label>
             <input
@@ -62,8 +62,18 @@
             >
           </div>
           <div class="form-group">
-            <label for="classificationList">Favorite Movie Genre:</label>
-            <select name="classification_id" id="classificationList"></select>
+            <label for="genreFilter">Favorite Movie Genre:</label>
+            <select id="genreFilter" name="movie_genre" required>
+              <option value="" disabled selected>Select a genre...</option>
+              <option value="28">Action</option>
+              <option value="12">Adventure</option>
+              <option value="35">Comedy</option>
+              <option value="99">Documentary</option>
+              <option value="878">Science Fiction</option>
+              <option value="10751">Family</option>
+              <option value="9648">Mystery</option>
+              <option value="27">Horror</option>
+            </select>
           </div>
           <div class="form-advice">
             <span
