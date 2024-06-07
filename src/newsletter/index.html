@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Cine 365 | Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet">
+    <script type="module" src="/js/main.js" defer></script>
+    <script type="module" src="/js/project.js" defer></script>
+  </body>
+  </head>
+  <body>
+    <header id="main-header">
+    </header>
+    <nav>
+      <ul id="menu">
+        <li><a id="toggleMenu">&equiv;</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="/top/index.html">World top</a></li>
+        <li><a href="/newsletter/index.html" class="active">Newsletter</a></li>
+        <li><a href="/contact/index.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Sing up Newsletter</h1>
+      <div class="form-container">
+        <p class="form-advice">📝 All fields are required ✍️</p>
+        <form id="registerForm" action="/account/index.html" method="post">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input
+              type="text"
+              id="firstName"
+              name="account_firstname"
+              placeholder="Enter a valid first name"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              id="lastName"
+              name="account_lastname"
+              placeholder="Enter a valid last name"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="account_email"
+              placeholder="Enter a valid email address"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="classificationList">Favorite Movie Genre:</label>
+            <select name="classification_id" id="classificationList"></select>
+          </div>
+          <div class="form-advice">
+            <span
+              >Register to get movies news and save your preferences</span
+            >
+          </div>
+          <button type="submit" class="btn-account">Sing up Newsletter</button>
+        </form>
+      </div>
+
+    </main>
+    <footer id="main-footer"></footer>
+</html>

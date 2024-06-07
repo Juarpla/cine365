@@ -131,3 +131,22 @@ export function getDiscountPercentage(product) {
     return Math.round((100 * (price - priceDiscounted)) / price);
   }
 }
+
+export async function buildClassificationList (classification_id = null) {
+  let data = [];
+  let classificationList =
+    '<select name="classification_id" id="classificationList" required>';
+  classificationList += "<option value=''>Choose a Classification</option>";
+  data.rows.forEach((row) => {
+    classificationList += '<option value="' + row.classification_id + '"';
+    if (
+      classification_id != null &&
+      row.classification_id == classification_id
+    ) {
+      classificationList += " selected ";
+    }
+    classificationList += ">" + row.classification_name + "</option>";
+  });
+  classificationList += "</select>";
+  return classificationList;
+};

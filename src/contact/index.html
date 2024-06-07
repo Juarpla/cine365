@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Cine 365 | Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet">
+    <script type="module" src="/js/main.js" defer></script>
+    <script type="module" src="/js/project.js" defer></script>
+  </body>
+  </head>
+  <body>
+    <header id="main-header">
+    </header>
+    <nav>
+      <ul id="menu">
+        <li><a id="toggleMenu">&equiv;</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="/top/index.html">World top</a></li>
+        <li><a href="/newsletter/index.html">Newsletter</a></li>
+        <li><a href="/contact/index.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Contact Us</h1>
+      <div class="form-container">
+        <p class="form-advice">📝 All fields are required ✍️</p>
+        <form id="registerForm" action="./success.html" method="post">
+          <div class="form-group">
+            <label for="contactName">First Name:</label>
+            <input
+              type="text"
+              id="contactName"
+              name="contact_name"
+              placeholder="Enter a valid first name"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="contact_email"
+              placeholder="Enter a valid email address"
+              required
+            >
+          </div>
+          <div class="form-group">
+          <label for="request">Request:</label>
+          <textarea
+            id="request"
+            name="contact_request"
+            rows="8"
+            placeholder="Write here..."
+            required
+          ></textarea>
+          </div>
+          <div class="form-advice">
+            <span
+              >We will review your request as soon as possible 💖</span
+            >
+          </div>
+          <button type="submit" class="btn-account">Send your request</button>
+        </form>
+      </div>
+
+    </main>
+    <footer id="main-footer"></footer>
+</html>
