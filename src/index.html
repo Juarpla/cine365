@@ -2,12 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Cine 365 | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet">
+    <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="./js/project.js" defer></script>
+  </body>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+    <header id="main-header">
+    </header>
+    <nav>
+      <ul id="menu">
+        <li><a id="toggleMenu">&equiv;</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="w01-task.html">Top Mundial</a></li>
+        <li><a href="w04-task.html">Newsletter</a></li>
+        <li><a href="w05-task.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Home</h1>
+      <input type="text" id="searchInput" placeholder="Search movies...">
+      <button id="searchButton">Search</button>
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="35">Comedy</option>
+        <option value="99">Documentary</option>
+        <option value="878">Science Fiction</option>
+        <option value="10751">Family</option>
+        <option value="9648">Mystery</option>
+        <option value="27">Horror</option>
+      </select>
+      <button id="byGenreButton">By Genre</button>
+      <button id="topRatedButton">Top Rated</button>
+      
+      <div id="movies-container"></div>
+
+    </main>
+    <footer id="main-footer">
+    </footer>
 </html>
