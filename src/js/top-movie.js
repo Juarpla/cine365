@@ -72,10 +72,26 @@ async function fetchByGenreMovies() {
   }
 }
 
+async function fetchTopRatedMovies() {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`,
+    );
+    const data = await response.json();
+    console.log(`Top Rated Movies: ", ${data.results}`);
+    displayMovies(data.results);
+  } catch (error) {
+    console.error(`Error fetching top rated movies: ${error}`);
+  }
+}
+
 // call:
-fetchPopularMovies();
+fetchTopRatedMovies();
 
 document.getElementById("searchButton").addEventListener("click", searchMovies);
 document
   .getElementById("byGenreButton")
   .addEventListener("click", fetchByGenreMovies);
+document
+  .getElementById("topRatedButton")
+  .addEventListener("click", fetchTopRatedMovies);
