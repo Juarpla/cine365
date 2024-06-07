@@ -1,3 +1,5 @@
+import Alert from "./alerts";
+
 document.addEventListener("DOMContentLoaded", () => {
   const accountDataDisplay = document.getElementById("accountDataDisplay");
   const deleteAccountDataBtn = document.getElementById("deleteAccountData");
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         9648: "Mystery",
         27: "Horror",
       };
-        accountDataDisplay.innerHTML = `
+      accountDataDisplay.innerHTML = `
               <section>
               <p><strong>First Name:</strong> ${data.account_firstname}</p>
               <p><strong>Last Name:</strong> ${data.account_lastname}</p>
@@ -25,12 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
       deleteAccountDataBtn.removeAttribute("hidden");
     } else {
-        accountDataDisplay.innerHTML = `
+      accountDataDisplay.innerHTML = `
               <section>
               <p>Please sign up in newsletter.</p>
               </section>
             `;
-        deleteAccountDataBtn.setAttribute("hidden");
+      deleteAccountDataBtn.setAttribute("hidden");
     }
   }
 
@@ -41,3 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderAccountData(null);
   });
 });
+
+// Render the alerts
+const alert = new Alert();
+alert.render();
